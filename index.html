@@ -22,7 +22,67 @@
   
   <!--Favicon-->
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon"> 
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+      .social-box {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 30px 0;
+  gap: 20px;
+}
+
+.social-box li {
+  display: inline-block;
+}
+
+.social-box a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover color based on platform */
+.linkedin-icon:hover {
+  background-color: #0077b5;
+  color: white;
+}
+.instagram-icon:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: white;
+}
+.whatsapp-icon:hover {
+  background-color: #25D366;
+  color: white;
+}
+.github-icon:hover {
+  background-color: #333;
+  color: white;
+}
+.mail-icon:hover {
+  background-color: #D44638;
+  color: white;
+}
+  </style>
 
 </head>
 
@@ -31,7 +91,7 @@
 
 <header class="navigation fixed-top">
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand font-tertiary h3" href="index.html"><img src="images/logo.png" alt="Myself"></a>
+    <!-- <a class="navbar-brand font-tertiary h3" href="index.html"><img src="images/logo.png" alt="Myself"></a> -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
       aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -64,7 +124,7 @@
   <div class="container">
     
 <div class="col-lg-11 mx-auto" style="text-align:left; padding: 40px 0;">
-  <h1 style="color: white; font-family: 'Poppins', sans-serif; font-size:5rem; line-height: 1.4;">
+  <h1 style="color: white; font-family: 'Poppins', sans-serif; font-size:4rem; line-height: 1.4;">
     Hi! I’m <br> Gomathi Krishnan
     <br>
     <span id="typing-roles" style="color: white; font-size: 5rem; font-weight: bold; display: inline-block; margin-top: 20px;"></span>
@@ -125,15 +185,15 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-10 mx-auto text-center">
-        <p class="font-secondary paragraph-lg text-dark">Know  More About Me ....</p>
-        <a href="about.html" class="btn btn-transparent">jump in </a>
+        <p class="font-secondary paragraph-lg text-dark">✨ "I’m Gomathi, a passionate 3rd-year Integrated M.Sc. Data Science student with a developer’s heart and an analyst’s mind. Blending the logic of code with the power of data, I strive to turn ideas into impactful digital experiences and uncover stories hidden in numbers." ✨</p>
+        <a href="about.html" class="btn btn-transparent">know more about me...</a>
       </div>
     </div>
   </div>
 </section>
 <!-- /about -->
-<!-- Skills -->
 
+<!-- skills -->
 <section class="section">
   <div class="container">
     <div class="row">
@@ -184,6 +244,10 @@
   </div>
 </section>
 
+<!-- /skills -->
+ 
+
+
 
 
 <!-- education -->
@@ -196,31 +260,32 @@
       <div class="col-lg-6 col-md-6 mb-80">
         <div class="d-flex">
           <div class="mr-lg-5 mr-3">
-            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
+            <i class="ti-medall icon icon-light icon-bg bg-info shadow rounded-circle d-block"  ></i>
           </div>
+          
           <div>
             <p class="text-dark mb-1">2022-2027</p>
-            <h4>Masters in DataScience</h4>
-            <p class="mb-0 text-light">AI ,Machine Learning ,Deep Learning</p>
+            <h4>Masters in DataScience(AI ,Machine Learning ,Deep Learning)</h4>
+            <p class="mb-0 text-light">Amrita Vishwa vidhyapeetham Ettimadai,Coimbatore(2022–2027)</p>
           </div>
         </div>
       </div>
       <div class="col-lg-6 col-md-6 mb-80">
         <div class="d-flex">
           <div class="mr-lg-5 mr-3">
-            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
+            <i class="ti-medall icon icon-light icon-bg bg-info shadow rounded-circle d-block"></i>
           </div>
           <div>
             <p class="text-dark mb-1">Completed in 2022</p>
-            <h4>Higher Secondary Education (Bio-Maths)</h4>
+            <h4>12th Grade (Bio-Maths)</h4>
             <p class="mb-0 text-light">Government Higher Secondary School, Kuniyamuthur, Coimbatore</p>
           </div>
         </div>
       </div>
-      <div class="col-lg-6 col-md-6 mb-80">
-        <div class="d-flex">
-          <div class="mr-lg-5 mr-3">
-            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
+      <div class="col-lg-6 col-md-6 mb-80" >
+        <div class="d-flex" >
+          <div class="mr-lg-5 mr-3"  >
+            <i class="ti-medall icon icon-light icon-bg bg-info shadow rounded-circle d-block"></i>
           </div>
           <div>
             <p class="text-dark mb-1">2025</p>
@@ -231,77 +296,34 @@
       </div>
       <div class="col-lg-6 col-md-6 mb-80">
         <div class="d-flex">
-          <div class="mr-lg-5 mr-3">
-            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
+          <div class="mr-lg-5 mr-3" >
+            <i class="ti-medall icon icon-light icon-bg bg-info   shadow rounded-circle d-block"></i>
           </div>
           <div>
             <p class="text-dark mb-1">Completed in 2020</p>
-            <h4>Secondary School Certificate</h4>
-            <p class="mb-0 text-light">Saraswathi Ramachandran Vidhyalaya Higher Secondary School, Coimbatore</p>
+            <h4>10th Grade</h4>
+            <p class="mb-0 text-light">Saraswathi Ramachandran Vidhyalaya Matriculation,Higher Secondary School, Coimbatore</p>
           </div>
         </div>
       </div>
     </div>
   </div>
   <!-- bg image -->
-  <img class="img-fluid edu-bg-image w-100" src="images/backgrounds/education-bg.png" alt="bg-image">
+  <img class="img-fluid edu-bg-image w-100" src="images/backgrounds/education-bg.png" alt="bg-image" 
+  >
 </section>
-<!-- /education -->
 
+<!-- blog -->
 
 
 <!-- blog -->
-<!-- <section class="section">
+<section class="section">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
         <h2 class="section-title">Blogs</h2>
       </div>
-      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-        <article class="card shadow">
-          <img class="rounded card-img-top" src="images/blog/post-3.jpg" alt="post-thumb">
-          <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="blog-single.html">Amazon increase income 1.5 Million</a>
-            </h4>
-            <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua.</p>
-            <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
-          </div>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-        <article class="card shadow">
-          <img class="rounded card-img-top" src="images/blog/post-4.jpg" alt="post-thumb">
-          <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="blog-single.html">Amazon increase income 1.5 Million</a>
-            </h4>
-            <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua.</p>
-            <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
-          </div>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-        <article class="card shadow">
-          <img class="rounded card-img-top" src="images/blog/post-2.jpg" alt="post-thumb">
-          <div class="card-body">
-            <h4 class="card-title"><a class="text-dark" href="blog-single.html">Amazon increase income 1.5 Million</a>
-            </h4>
-            <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua.</p>
-            <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- /blog -->
- <section class="section">
-  <div class="container">
+      <div class="container">
     <div class="row">
         <div class="col-lg-4 col-sm-6 mb-4">
           <article class="card shadow">
@@ -372,6 +394,14 @@
     </div>
   </div>
 </section>
+      
+      
+</section> 
+<!-- /blog -->
+ <section class="section">
+  
+  
+ 
 
 <!-- contact -->
 <section class="section section-on-footer" data-background="images/backgrounds/bg-dots.png">
@@ -383,19 +413,22 @@
       <div class="col-lg-8 mx-auto">
         <div class="bg-white rounded text-center p-5 shadow-down">
           <h4 class="mb-80">Contact Form</h4>
-          <form action="#" class="row">
+          <form action="https://api.web3forms.com/submit" method="POST" class="row contact-form">
+            <input type="hidden" name="access_key" value="b5c04954-0869-4f24-a3af-ca91691149ef" />
+            <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+            
             <div class="col-md-6">
-              <input type="text" id="name" name="name" placeholder="Full Name" class="form-control px-0 mb-4">
+              <input type="text" id="name" name="name" placeholder="Full Name" class="form-control px-0 mb-4" required>
             </div>
             <div class="col-md-6">
-              <input type="email" id="email" name="email" placeholder="Email Address" class="form-control px-0 mb-4">
+              <input type="email" id="email" name="email" placeholder="Email Address" class="form-control px-0 mb-4" required>
             </div>
             <div class="col-12">
               <textarea name="message" id="message" class="form-control px-0 mb-4"
-                placeholder="Type Message Here"></textarea>
+                placeholder="Type Message Here" required></textarea>
             </div>
             <div class="col-lg-6 col-10 mx-auto">
-              <button class="btn btn-primary w-100">send</button>
+              <button type="submit" class="btn btn-primary w-100">send</button>
             </div>
           </form>
         </div>
@@ -405,7 +438,7 @@
 </section>
 <!-- /contact -->
 
-<!-- footer -->
+
 <footer class="bg-dark footer-section">
   <div class="section">
     <div class="container">
@@ -420,19 +453,50 @@
         </div>
         <div class="col-md-4">
           <h5 class="text-light">Address</h5>
-          <p class="text-white paragraph-lg font-secondary">3/1b 3 rd street park Avenue Kuniyamuthur Coimbatore,641008</p>
+          <a href="https://maps.app.goo.gl/gdiKmW1X7d2VU3Rm8" target="_blank" style="color: white; text-decoration: none;">
+      <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 8px; color: #f50404; ">
+      <p class="text-white paragraph-lg font-secondary">3/1b 3 rd street park Avenue Kuniyamuthur Coimbatore,641008 USA</p></i>
+    </a>
         </div>
       </div>
     </div>
   </div>
+  <ul class="social-box">
+    <li>
+      <a class="linkedin-icon" href="https://www.linkedin.com/in/gomathi-krishnan-420b74361" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="instagram-icon" href="https://www.instagram.com/mahadevs_puthri" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+    <li>
+      <a class="whatsapp-icon" href="https://wa.me/9894200436" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </li>
+    <li>
+      <a class="github-icon" href="https://github.com/ramya-117" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+    <li>
+      <a class="mail-icon" href="mailto:kgomathi2004@gmail.com">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+
   <div class="border-top text-center border-dark py-5">
-    <p class="mb-0 text-light">Copyright ©<script>
+    <p class="mb-0 text-light"><script>
         var CurrentYear = new Date().getFullYear()
         document.write(CurrentYear)
-      </script>  <a href="themefisher.com"></a></p>
+      </script> <a href="themefisher.com"></a></p>
   </div>
 </footer>
-<!-- /footer -->
+
 
 <!-- jQuery -->
 <script src="plugins/jQuery/jquery.min.js"></script>
