@@ -23,6 +23,14 @@
   <!--Favicon-->
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+   <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -31,7 +39,7 @@
 
 <header class="navigation fixed-top">
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand font-tertiary h3" href="index.html"><img src="images/logo.png" alt="Myself"></a>
+    <!-- <a class="navbar-brand font-tertiary h3" href="index.html"><img src="images/logo.png" alt="Myself"></a> -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
       aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -58,6 +66,7 @@
     </div>
   </nav>
 </header>
+
 
 <section class="page-title-alt bg-primary position-relative">
   <div class="container">
@@ -598,31 +607,82 @@
 </div>
 </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const skills = document.querySelectorAll('.gk-skill');
-        
-        skills.forEach(skill => {
-            const percentage = skill.querySelector('.gk-skill-name span:last-child').textContent;
-            const progressBar = skill.querySelector('.gk-progress-bar');
-            
-            progressBar.style.setProperty('--target-width', percentage);
-            progressBar.style.width = '0';
-            
-            skill.addEventListener('mouseenter', function() {
-                progressBar.style.width = percentage;
-            });
-            
-            skill.addEventListener('mouseleave', function() {
-                progressBar.style.width = '0';
-            });
-        });
-    });
-</script>
-</section>
-<br>
- 
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const skills = document.querySelectorAll('.gk-skill');
 
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const skill = entry.target;
+          const percentage = skill.querySelector('.gk-skill-name span:last-child').textContent;
+          const progressBar = skill.querySelector('.gk-progress-bar');
+          progressBar.style.width = percentage;
+          observer.unobserve(skill); // Run once per skill
+        }
+      });
+    }, {
+      threshold: 0.5 // Trigger when 50% of the skill is visible
+    });
+
+    skills.forEach(skill => {
+      const progressBar = skill.querySelector('.gk-progress-bar');
+      const percentage = skill.querySelector('.gk-skill-name span:last-child').textContent;
+
+      // Initial width set to 0
+      progressBar.style.width = '0';
+      progressBar.style.transition = 'width 1.5s ease-in-out';
+
+      observer.observe(skill);
+    });
+  });
+</script>
+
+</section>
+
+
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const skills = document.querySelectorAll('.gk-skill');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const skill = entry.target;
+          const percentage = skill.querySelector('.gk-skill-name span:last-child').textContent;
+          const progressBar = skill.querySelector('.gk-progress-bar');
+          progressBar.style.width = percentage;
+          observer.unobserve(skill); // Run once per skill
+        }
+      });
+    }, {
+      threshold: 0.5 // Trigger when 50% of the skill is visible
+    });
+
+    skills.forEach(skill => {
+      const progressBar = skill.querySelector('.gk-progress-bar');
+      const percentage = skill.querySelector('.gk-skill-name span:last-child').textContent;
+
+      // Initial width set to 0
+      progressBar.style.width = '0';
+      progressBar.style.transition = 'width 1.5s ease-in-out';
+
+      observer.observe(skill);
+    });
+  });
+</script>
+
+
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br><br>
 
 
 <!-- contact -->
@@ -635,19 +695,22 @@
       <div class="col-lg-8 mx-auto">
         <div class="bg-white rounded text-center p-5 shadow-down">
           <h4 class="mb-80">Contact Form</h4>
-          <form action="#" class="row">
+          <form action="https://api.web3forms.com/submit" method="POST" class="row contact-form">
+            <input type="hidden" name="access_key" value="b5c04954-0869-4f24-a3af-ca91691149ef" />
+            <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+            
             <div class="col-md-6">
-              <input type="text" id="name" name="name" placeholder="Full Name" class="form-control px-0 mb-4">
+              <input type="text" id="name" name="name" placeholder="Full Name" class="form-control px-0 mb-4" required>
             </div>
             <div class="col-md-6">
-              <input type="email" id="email" name="email" placeholder="Email Address" class="form-control px-0 mb-4">
+              <input type="email" id="email" name="email" placeholder="Email Address" class="form-control px-0 mb-4" required>
             </div>
             <div class="col-12">
               <textarea name="message" id="message" class="form-control px-0 mb-4"
-                placeholder="Type Message Here"></textarea>
+                placeholder="Type Message Here" required></textarea>
             </div>
             <div class="col-lg-6 col-10 mx-auto">
-              <button class="btn btn-primary w-100">send</button>
+              <button type="submit" class="btn btn-primary w-100">send</button>
             </div>
           </form>
         </div>
@@ -673,13 +736,43 @@
         </div>
         <div class="col-md-4">
           <h5 class="text-light">Address</h5>
-          <p class="text-white paragraph-lg font-secondary">3/1b 3 rd street park Avenue Kuniyamuthur Coimbatore,641008</p>
+          <a href="https://maps.app.goo.gl/gdiKmW1X7d2VU3Rm8" target="_blank" style="color: white; text-decoration: none;">
+      <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 8px; color: #f50404; ">
+      <p class="text-white paragraph-lg font-secondary">3/1b 3 rd street park Avenue Kuniyamuthur Coimbatore,641008 USA</p></i>
+    </a>
         </div>
       </div>
     </div>
   </div>
+    <ul class="social-box">
+    <li>
+      <a class="linkedin-icon" href="https://www.linkedin.com/in/gomathi-krishnan-420b74361" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="instagram-icon" href="https://www.instagram.com/mahadevs_puthri" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+    <li>
+      <a class="whatsapp-icon" href="https://wa.me/9894200436" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </li>
+    <li>
+      <a class="github-icon" href="https://github.com/ramya-117" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+    <li>
+      <a class="mail-icon" href="mailto:kgomathi2004@gmail.com">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
   <div class="border-top text-center border-dark py-5">
-    <p class="mb-0 text-light">Copyright ©<script>
+    <p class="mb-0 text-light"><script>
         var CurrentYear = new Date().getFullYear()
         document.write(CurrentYear)
       </script>  <a href="themefisher.com"></a></p>
